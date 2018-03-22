@@ -1,0 +1,40 @@
+body {
+	text-align: center;
+}
+
+#canvas {
+  margin: 0 auto;
+  border: 1px solid #000;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  width: 500px;
+  margin: 10px auto 0 auto;
+  justify-content: space-between;
+}
+
+#information {
+	margin: 0 auto;
+	width: 480px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#score, #lives,{
+	font-size: 1.5em;
+}
+
+#information2 {
+	top:0px;
+	margin: 0 auto;
+	width: 480px;
+	display: flex;
+	justify-content: space-between;
+}
+
+ #mute, #timer{
+	height: 30px;
+	bottom: 0px;
+ }

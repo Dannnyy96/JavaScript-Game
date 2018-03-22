@@ -1,0 +1,7 @@
+├── game.js
+│   └── frame()
+├── level.js
+│   ├── doesPlayerCollideWithLevel(player, level)
+│   └── drawLevel(context, level, gridSize)
+└── player.js
+    └── drawPlayer(context, player, gridSize)

@@ -1,0 +1,12 @@
+#canvas {
+  margin: 0 auto;
+  border: 1px solid #000;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  width: 500px;
+  margin: 10px auto 0 auto;
+  justify-content: space-between;
+}

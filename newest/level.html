@@ -1,0 +1,78 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="player.js"></script>
+<script src="enemy.js"></script>
+<script src="level.js"></script>
+<script src = "game.js"></script>
+
+<head>
+<link rel="stylesheet" type="text/css" href="level.css">
+</head>
+
+<body>
+
+<div id="information2">
+<div id="timer"> Timer: 00:00:00</div>
+<button id="mute"  onclick="mute()">Click to mute/unmute </button>
+</div>
+
+<div id="SplashScreen">
+<img id="titlescreen" src="titlescreen/titlescreen1.png">
+<h1>Click the screen to see the instructions! :D </h1>
+</div>
+
+<div id="Instructions"style="display: none">
+<img id="titlescreen2" src="titlescreen/titlescreen3.png" width="640" height="640" >
+<h1>Click the screen to play! :D </h1>
+</div>
+
+<script>
+    $("#titlescreen").click(function () {
+        $("#SplashScreen").hide();
+		$("#Instructions").show();
+    });
+
+	 $("#titlescreen2").click(function () {
+        $("#Instructions").hide();
+        $("#canvas").show();
+		$("#information").show();
+    });
+	
+        function mute(){
+              if(document.getElementById('background_audio').muted == false){
+					document.getElementById('background_audio').muted = true;
+					console.log("Muted");
+              } else {
+					document.getElementById('background_audio').muted = false;
+					console.log("Unmuted");
+              }
+		}
+
+</script>
+
+
+<canvas id="canvas" width="480" height="480" style="display: none"></canvas>
+
+<div id="information" style="display: none">
+	<div id="score"></div>
+	<div id="lives"></div>
+</div>
+<div id=invincible style="display: none">You are now invincible for 10 seconds!</div>
+<div id=noinvincible style="display: none">You are no longer invincible</div>
+<div id=collectall style="display: none">You need to collect all coins to continue!</div>
+
+<audio id="background_audio" autoplay="true" loop="true" style="display: none">
+  <source  src="music/SuspenseLoop.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio> 
+
+<audio id="door" style="display: none;">
+  <source src="music/door.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="item" style="display: none;">
+  <source src="music/item.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</body>
+</html>
